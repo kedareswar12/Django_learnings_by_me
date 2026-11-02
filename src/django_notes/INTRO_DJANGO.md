@@ -45,3 +45,13 @@
       - when ever you are sending the response you are sedding the http request for this we get an http response 
 
 - you are requested to maintains your own `urls.py` file insed your app and consoliated to mysite this is the conventional way that we use to follow 
+
+- `uv run python manage.py makemigrations ` this command need to be used whaen ever any chages is made in the models.py file 
+- `uv run python manage.py migrate . ` - this will migrate the model into the data base 
+- if you ever need to create the data_items inside the database then you can use the command  `uv run python manage.py shell` 
+  - this will help you to create the objects in the shell 
+  - keep remember after creation of the object save the object 
+  - to view all the objects in the shell you can use the `Item.objects.all()` -> This will list out all the objects in the daatabse 
+  - but to create the data items in the database you need to use the admin panal provided by the Django 
+  - and for creating the admin panel you need to register the dummy user initially this can be done by  `uv run python manage.py createsuperuser `
+  - `admin.site.register(Item)` for registerring the item data in the admin panael go to the `admin.py` and register the model you have cresated by the above syntax 
